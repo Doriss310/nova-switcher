@@ -6,7 +6,7 @@
         v-model="value"
         @change="toggle"
     />
-    <span class="switch"></span>
+    <span class="switch" :style="switchStyle"></span>
     <span class="label">{{ label }}</span>
   </label>
 </template>
@@ -69,6 +69,14 @@ export default {
       return {
         'true': this.field.confirm_to_false ?? false,
         'false': this.field.confirm_to_true ?? false,
+      }
+    },
+
+    switchStyle() {
+      if (this.value) {
+        return this.field.true_color ? { '--teal': this.field.true_color, '--dark-teal': this.field.true_color } : {}
+      } else {
+        return this.field.false_color ? { '--light-gray': this.field.false_color, '--gray': this.field.false_color } : {}
       }
     }
   }

@@ -68,4 +68,30 @@ class NovaSwitcher extends Boolean
         $this->confirmToFalse($toFalse ?? $toTrue ?? $this->defaultConfirm);
         return $this;
     }
+
+    public function trueColor(string $color): self
+    {
+        return $this->withMeta([
+            'true_color' => $color,
+        ]);
+    }
+
+    public function falseColor(string $color): self
+    {
+        return $this->withMeta([
+            'false_color' => $color,
+        ]);
+    }
+
+    public function withColors(null|string $true = null, null|string $false = null): self
+    {
+        if ($true) {
+            $this->trueColor($true);
+        }
+        if ($false) {
+            $this->falseColor($false);
+        }
+
+        return $this;
+    }
 }
