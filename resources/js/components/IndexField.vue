@@ -134,12 +134,12 @@ export default {
   --switch-container-width: 50px;
   --switch-size: calc(var(--switch-container-width) / 2);
 
-  --light-gray: rgb(var(--colors-gray-200));
-  --gray: rgb(var(--colors-gray-300));
-  --dark-gray: rgb(var(--colors-gray-400));
+  --light-gray: rgb(var(--colors-red-500));
+  --gray: rgb(var(--colors-red-300));
+  --dark-gray: rgb(var(--colors-red-400));
   --teal: rgb(var(--colors-green-500));
   --dark-teal: rgb(var(--colors-green-500));
-
+  
   /* Vertically center the inner circle */
   display: flex;
   align-items: center;
