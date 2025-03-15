@@ -84,9 +84,9 @@ export default {
 </script>
 <style>
 .dark .nova-switcher .switch {
-  --light-gray: rgb(var(--colors-gray-600));
-  --gray: rgb(var(--colors-gray-700));
-  --dark-gray: rgb(var(--colors-gray-500));
+  --light-gray: rgb(var(--colors-red-500));
+  --gray: rgb(var(--colors-red-700));
+  --dark-gray: rgb(var(--colors-red-600));
   --teal: rgb(var(--colors-green-500));
   --dark-teal: rgb(var(--colors-green-500));
 }
